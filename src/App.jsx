@@ -1,5 +1,9 @@
 import styles from './App.module.css'
 import perfil from '../public/foto3.jpg'
+import facebookIcon from '../public/facebook.png'
+import instagramIcon from '../public/instagram.png'
+import linkedinIcon from '../public/linkedin.png'
+import whatsappIcon from '../public/whatsapp.avif'
 
 function App() {
 
@@ -33,6 +37,12 @@ function App() {
           <h2>sessão 4</h2>
         </section>
       </main>
+      <footer className={styles.rodape}>
+        <a href="www.facebook.com" target='_blank'> <img src={facebookIcon} alt="Facebook" /></a>
+        <a href="www.instagram.com" target='_blank'> <img src={instagramIcon} alt="Instagram" /></a>
+        <a href="www.linkedin.com" target='_blank'> <img src={linkedinIcon} alt="Linkedin" /></a>
+        <a href="www.whatsapp.com" target='_blank'> <img src={whatsappIcon} alt="WhatsApp" /></a>
+      </footer>
     </>
   )
 }
