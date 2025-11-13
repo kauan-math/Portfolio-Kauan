@@ -5,16 +5,21 @@ import facebookIcon from '../public/facebook.png'
 import instagramIcon from '../public/instagram.png'
 import githubIcon from '../public/github.png'
 import whatsappIcon from '../public/ww.png'
-import htmlimg from '../public/HTML.jpg'
-import cssImg from '../public/css.jpg'
-import jsImg from '../public/js.jpg'
-import viteImg from '../public/vite.png'
-import reactImg from '../public/React.png'
-import vercelImg from '../public/Vercel.png'
 
-import { useState } from 'react'
+
+import { useState, useEffect } from 'react'
+import { Card } from './components/card'
 
 function App() {
+const [dados, setDados] = useState([])
+
+  useEffect(() => {
+      fetch('/cardsInfo.json')
+      .then(response => response.json())
+      .then(data => {
+        setDados(data)
+      })
+  }, [])
 
   const defaultPhoneNumber = '554192897222'
 
@@ -59,61 +64,35 @@ function App() {
           </div>
         </section>
         <section className={styles.s2} id='s2'>
-          <h2 className={styles.tecTitle}>Tecnologias</h2>
+          <h2 className={styles.tecTitle}>TECNOLOGIA</h2>
           <div className={styles.wrapCards}>
-            <div className={styles.card}>
-              <img width={100} src={htmlimg} alt="HTML" />
-              <h3>HTML</h3>
-              <p>HTML é a sigla para Hypertext Markup Language (Linguagem de Marcação de Hipertexto) e é a linguagem de marcação padrão usada para criar e estruturar páginas da web</p>
-            </div>
-            <div className={styles.card}>
-              <img width={100} src={cssImg} alt="CSS" />
-              <h3>CSS</h3>
-              <p>CSS (Cascading Style Sheets) é uma linguagem de estilo usada para descrever a apresentação visual de um documento escrito em linguagem de marcação como HTML.</p>
-            </div>
-            <div className={styles.card}>
-              <img width={100} src={jsImg} alt="JS" />
-              <h3>JS</h3>
-              <p>JavaScript é uma linguagem de programação leve, interpretada e versátil, usada para tornar páginas da web dinâmicas e interativas</p>
-            </div>
-            <div className={styles.card}>
-              <img width={100} src={viteImg} alt="Vite" />
-              <h3>Vite JS</h3>
-              <p>Vite JS é uma ferramenta moderna de construção de front-end que proporciona uma experiência de desenvolvimento mais rápida e eficiente para projetos web.</p>
-            </div>
-            <div className={styles.card}>
-              <img width={100} src={reactImg} alt="React" />
-              <h3>React</h3>
-              <p>React (também conhecido como React.js ou ReactJS) é uma biblioteca JavaScript de código aberto e focada no desenvolvimento de interfaces de usuário (UI), especialmente para aplicações de página única (SPAs)</p>
-            </div>
-            <div className={styles.card}>
-              <img width={100} src={vercelImg} alt="Vercel" />
-              <h3>Vercel</h3>
-              <p>Vercel é uma plataforma de nuvem que facilita o desenvolvimento e a implantação de sites e aplicativos web modernos.</p>
-            </div>
-          </div>
+            {dados.map((item) => {
+              return(
+                <div key={item.id}>
+                <Card tec={item.tecnologia} image={item.imagem} text={item.texto}/>
+                </div>
+              )
+            })}
+        </div>
         </section>
+
         <section id='s3' className={styles.s3}>
           <h2>Github repositorios</h2>
           <p>sadas</p>
         </section>
 
         <section id='s5' className={styles.s5}>
-
           <div class="card">
-  <div class="card-content">
-    <p class="card-title">Card hover effect
-    </p><p class="card-para">Lorem ipsum dolor sit 
-      amet, consectetur adipiscing elit.</p>
- 
+            <p class="card-title">Minha Escola</p>
+            <p class="small-desc">
+              <p>Minha escola, mesmo com seus problemas, ainda é uma escola muito boa</p>
+            </p>
+            <div class="go-corner">
+              <div class="go-arrow">→</div>
+            </div>
+          </div>
 
-
-          <h2>Minha Escola</h2>
-          <p>Minha escola, mesmo com seus problemas, ainda é uma escola muito boa</p>
-        </div> 
-        </div>  
         </section>
-
         <section id='s4' className={styles.s4}>
           <h2>CONTATO</h2>
           <div className={styles.formData}>

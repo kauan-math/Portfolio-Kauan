@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "imagem": "/HTML.jpg",
+        "tecnologia": "HTML",
+        "texto": "HTML é a sigla para Hypertext Markup Language (Linguagem de Marcação de Hipertexto) e é a linguagem de marcação padrão usada para criar e estruturar páginas da web"
+        
+    },
+    {
+        "id": "2",
+        "imagem": "/CSS.webp",
+        "tecnologia": "CSS",
+        "texto": "CSS (Cascading Style Sheets) é uma linguagem de estilo usada para descrever a apresentação visual de um documento escrito em linguagem de marcação como HTML."
+        
+    },
+    {
+        "id": "3",
+        "imagem": "/js.jpg",
+        "tecnologia": "JavaScript",
+        "texto": "JavaScript é uma linguagem de programação leve, interpretada e versátil, usada para tornar páginas da web dinâmicas e interativas"
+    },
+    {
+        "id": "4",
+        "imagem": "/vite.png",
+        "tecnologia": "Vite",
+        "texto": "Vite JS é uma ferramenta moderna de construção de front-end que proporciona uma experiência de desenvolvimento mais rápida e eficiente para projetos web."
+        
+    },
+    {
+        "id": "5",
+        "imagem": "/React.png",
+        "tecnologia": "React",
+        "texto": "React (também conhecido como React.js ou ReactJS) é uma biblioteca JavaScript de código aberto e focada no desenvolvimento de interfaces de usuário (UI), especialmente para aplicações de página única (SPAs)"
+        
+    },
+    {
+        "id": "6",
+        "imagem": "/Vercel.png",
+        "tecnologia": "Vercel",
+        "texto": "Vercel é uma plataforma de nuvem que facilita o desenvolvimento e a implantação de sites e aplicativos web modernos."
+        
+    }
+
+]
